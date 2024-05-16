@@ -17,6 +17,7 @@ def main():
     returns: None
     '''
     print("microservice A is running")
+    # the file paths may need to be changed based on your directory structure
     signs = {
         "Aries": "./images/aries.jpg",
         "Taurus": "./images/taurus.jpg",
@@ -37,7 +38,6 @@ def main():
         f = open("request.txt", "r")
         content = f.read()
         f.close()
-
         # if request.txt contains an astrological sign, write the corresponding
         # file path into request.txt
         if content in signs:
