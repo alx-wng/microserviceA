@@ -7,13 +7,15 @@ import time
 
 def main():
     '''
-    This microservice program will open request.txt, read the file, and if the
-    file contains the name of an astrological sign, will write the path of an
-    image associated with that sign, erase the astroligcal sign from
-    request.txt, and write the image file path name into request.txt
+    This microservice program will open microserviceA.txt, read the file, and
+    if the file contains the name of an astrological sign, will write the path
+    of an image associated with that sign, erase the astroligcal sign from
+    microserviceA.txt, and write the image file path name into
+    microserviceA.txt
 
-    pre: request.txt is in the same directory as microserviceA.py
-    post: the contents of request.txt may be changed to contain a file path
+    pre: microserviceA.txt is in the same directory as microserviceA.py
+    post: the contents of microserviceA.txt may be changed to contain a file
+    path
     returns: None
     '''
     print("microservice A is running")
@@ -34,15 +36,16 @@ def main():
     }
     while True:
         time.sleep(1)
-        # open and read request.txt
-        f = open("request.txt", "r")
+        # open and read microserviceA.txt
+        f = open("microserviceA.txt", "r")
         content = f.read()
         f.close()
-        # if request.txt contains an astrological sign, write the corresponding
-        # file path into request.txt
+        # if microserviceA.txt contains an astrological sign, write the
+        # corresponding file path into microserviceA.txt
         if content in signs:
-            f = open("request.txt", "w")
-            print("writing image file path for ", content, " into request.txt")
+            f = open("microserviceA.txt", "w")
+            print("writing image file path for ", content,
+                  " into microserviceA.txt")
             f.write(signs[content])
             f.close()
     return

@@ -15,17 +15,18 @@ def main():
              "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     for sign in signs:
         time.sleep(2)
-        # open and write into request.txt
-        f = open("request.txt", "w")
-        print("writing ", sign, " into request.txt")
+        # open and write into microserviceA.txt
+        f = open("microserviceA.txt", "w")
+        print("writing ", sign, " into microserviceA.txt")
         f.write(sign)
         f.close()
         time.sleep(2)
-        # read the image file path from request.txt
-        f = open("request.txt", "r")
+        # read the image file path from microserviceA.txt
+        f = open("microserviceA.txt", "r")
         content = f.read()
-        print(content, " was read from request.txt")
+        print(content, " was read from microserviceA.txt")
         f.close()
+    return
 
 
 main()
