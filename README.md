@@ -22,4 +22,4 @@ How to receive data:
     that file path from microserviceA.txt.
 
 UML sequence diagram:
-[UML sequence diagram](/UML sequence diagram.svg)
+![UML sequence diagram](https://github.com/alx-wng/microserviceA/assets/154235295/5775326b-df21-40b1-89e6-013f30e2bc96)
